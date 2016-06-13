@@ -1,5 +1,7 @@
 项目分 前、中、后期 三个阶段进行
 
+任务总路线预览：
+
   前期
     用户需求分析
     数据库数据表的设计
@@ -25,3 +27,11 @@
   微信模块
   *
   APP模块
+
+
+  2016年6月13日 新的任务：
+
+  参考：
+      http://www.woshipm.com/pmd/18531.html 
+      http://www.uisdc.com/20-strokes-and-perfect-design
+      进行网页前端页面设计

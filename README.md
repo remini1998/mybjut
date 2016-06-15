@@ -14,6 +14,7 @@
  
  Yii框架
     深入理解Yii2.0 http://www.digpage.com/property.html
+    下载安装：http://happymc.iteye.com/blog/2150829
     慕课网 Yii框架入门
  
  网站构建

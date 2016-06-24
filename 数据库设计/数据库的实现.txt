@@ -1,0 +1,28 @@
+
+CREATE DATABASE mybjut;
+
+
+
+alter database mybjut character set utf8;
+
+
+USE mybjut;
+
+CREATE TABLE admin(
+admin_id smallint unsigned NOT NULL auto_increment PRIMARY KEY comment 'ID',
+admin_fname varchar(3) NOT NULL comment '姓',
+admin_lname varchar(5) NOT NULL comment '名',
+admin_phone int(11) NOT NULL UNIQUE KEY comment '手机号码(一个手机只能注册一个账号)',
+admin_password varchar(24) NOT NULL comment '密码',
+admin_email varchar(32) comment '邮箱'
+)ENGINE = INNODB;
+
+
+CREATE TABLE article(
+article_id smallint unsigned NOT NULL auto_increment PRIMARY KEY comment 'ID',
+article_author_id smallint unsigned NOT NULL comment '作者ID',
+article_summary varchar(50) NOT NULL comment '文章摘要',
+article_content text NOT NULL comment '文章内容',
+article_image varchar(81) comment '图片链接',
+constraint fk_article_author_id FOREIGN KEY(article_author_id) references admin(admin_id)
+)ENGINE = INNODB;

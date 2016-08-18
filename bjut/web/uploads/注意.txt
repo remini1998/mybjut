@@ -1,0 +1,7 @@
+
+	在服务器端部署时， 模型uploadform的   路径应该用 “\”来表示文件层级
+
+
+	在  admin/article/view   也该
+
+	在  uploadform中的 upload方法和base2img方法下需要该路径

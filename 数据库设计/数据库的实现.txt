@@ -2,14 +2,15 @@
 
 注册时，需要：
 0. ID		必要，数据表的标志，不需要用户手动填写
-1. 邮箱		必要，登录的名称
-2. 密码		必要，登录的认证
-3. 昵称		必要，用于显示用户名
+!!1. 邮箱		必要，登录的名称
+!!2. 密码		必要，登录的认证
+!!3. 昵称		必要，用于显示用户名
 4. 级别		必要，用于标志用户的权限	1 --- 普通，2 --- 认证，3 --- 高级
 
 5. 手机号码	认证必须，认证手机号码时成为认证用户
 6. 姓		非必须
-7. 名		非必须 
+7. 名		非必须
+8. 个人简介     非必须 
 
 
 // DROP database mybjut;
@@ -26,7 +27,7 @@ CREATE TABLE `admin`(
 `admin_password` varchar(24) NOT NULL comment '密码',
 `admin_name` varchar(12) NOT NULL comment '昵称',
 `admin_type` int(1) NOT NULL DEFAULT 1 comment '账户类型',
-`admin_phone` int(11) NOT NULL UNIQUE KEY comment '手机号码',
+`admin_phone` int(11) UNIQUE KEY comment '手机号码',
 `admin_fname` varchar(3) comment '姓',
 `admin_lname` varchar(5) comment '名',
 `authKey` varchar(100) NOT NULL DEFAULT '',
@@ -36,8 +37,11 @@ CREATE TABLE `admin`(
 CREATE TABLE `article`(
 `article_id` smallint unsigned NOT NULL auto_increment PRIMARY KEY comment '文章ID',
 `article_author_id` smallint unsigned NOT NULL comment '作者ID',
+`article_title` varchar(24) NOT NULL comment '文章标题',
 `article_summary` varchar(50) NOT NULL comment '文章摘要',
-`article_content` text NOT NULL comment '文章内容',
+`article_content` MEDIUMTEXT NOT NULL comment '文章内容',
 `article_image` varchar(81) comment '图片链接',
+`article_time` datetime DEFAULT CURRENT_TIMESTAMP() comment '写作日期',
+`article_star` smallint unsigned NOT NULL DEFAULT 0 comment '收藏数',
 constraint fk_article_author_id FOREIGN KEY(article_author_id) references admin(admin_id)
 )ENGINE = INNODB;

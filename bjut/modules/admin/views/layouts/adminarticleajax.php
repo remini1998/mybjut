@@ -67,7 +67,6 @@ AppAsset::register($this);
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
                     <li><a href="index.php?r=site/thing"><span class="icon-camera-retro"></span> 近期校园</a></li>
-                    <li><a href="index.php?r=admin/default/home"><span class="icon-user"></span>  个人主页</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">工作区<span class="caret"></span></a>
                       <ul class="dropdown-menu">
@@ -80,7 +79,10 @@ AppAsset::register($this);
                         <li><a href="index.php?r=site/contact">意见反馈</a></li>
                       </ul>
                     </li>
-                  </ul>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php?r=admin/default/home"><span class="icon-user"> 个人中心 </span></a>
+                    </li>
                   <form class="navbar-form navbar-right" role="search" method="post">
                     <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                     <div class="form-group">
@@ -100,6 +102,7 @@ AppAsset::register($this);
                     </button>'
                     ?>                    
                   </form>
+                </ul>
 
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->

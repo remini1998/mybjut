@@ -67,7 +67,6 @@ AppAsset::register($this);
                   <ul class="nav navbar-nav">
                     <li><a href="index.php">首页 <span class="sr-only">(current)</span></a></li>
                       <li><a href="index.php?r=site/thing"><span class="icon-camera-retro"></span> 近期校园</a></li>
-                      <li class="active"><a href="index.php?r=admin/default/home"><span class="icon-user"></span> 个人主页</a></li>
                       <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">工作区<span class="caret"></span></a>
                       <ul class="dropdown-menu">
@@ -81,25 +80,28 @@ AppAsset::register($this);
                       </ul>
                     </li>
                   </ul>
-                  <form class="navbar-form navbar-right" role="search" method="post">
-                    <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-                    sagittis lacus vel augue laoreet rutrum faucibus.">
-                      搜索
-                    </button>
-                    <!-- <button type="submit" class="btn btn-default">搜索</button> -->                   
-                    <?php
-                    echo 
-                    Yii::$app->user->isGuest ? '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                    登录/注册
-                    </button>':'<button type="button" class="btn btn-primary" href="index.php?r=site/logout" data-method="post">
-                    注销'. Yii::$app->user->identity->admin_name.' 
-                    </button>'
-                    ?>                    
-                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php?r=admin/default/home"><span class="icon-user">个人中心 </span></a></li>
+                    <form class="navbar-form navbar-right" role="search" method="post">
+                      <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                      sagittis lacus vel augue laoreet rutrum faucibus.">
+                        搜索
+                      </button>
+                      <!-- <button type="submit" class="btn btn-default">搜索</button> -->                   
+                      <?php
+                      echo 
+                      Yii::$app->user->isGuest ? '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                      登录/注册
+                      </button>':'<button type="button" class="btn btn-primary" href="index.php?r=site/logout" data-method="post">
+                      注销'. Yii::$app->user->identity->admin_name.' 
+                      </button>'
+                      ?>                    
+                    </form>
+                  </ul>
 
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->

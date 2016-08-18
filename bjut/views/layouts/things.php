@@ -101,8 +101,7 @@ AppAsset::register($this);
                     </li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.php?r=admin/default/home">个人中心 </a>
-                    </li>
+                    <li><a href="index.php?r=admin/default/home"><span class="icon-user"> 个人中心 </span></a></li>
                   <form class="navbar-form navbar-right" role="search" method="post">
                     <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                     <div class="form-group">

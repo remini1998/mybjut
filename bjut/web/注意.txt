@@ -1,0 +1,2 @@
+
+使用h5bp模板时候，在网站根目录（"www"）下，命名为 favicon.ico 和 apple-touch-icon.png 的图片会被作为网站的logo。

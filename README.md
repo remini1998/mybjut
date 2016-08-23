@@ -2,6 +2,10 @@
 这是测试项目，完成后将迁移到站点上
 本项目采用 Apache+MySQL+PHP 来构建动态Web站点，并选择Yii2作为后端框架，
 
+=======
+
+# 本项目于16年8月已经上线，网站为 www.mybjut.cn
+
 # 注意：
   
   先看 
@@ -14,6 +18,7 @@
  
  Yii框架
     深入理解Yii2.0 http://www.digpage.com/property.html
+    下载安装：http://happymc.iteye.com/blog/2150829
     慕课网 Yii框架入门
  
  网站构建
